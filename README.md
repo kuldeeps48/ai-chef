@@ -1,13 +1,64 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 # ai-chef
+
+AI-powered recipe assistant that turns whatever is in the kitchen into step‑by‑step meals, tips, and shopping lists.
+
+Features
+
+- Turn ingredients into complete recipes with steps, timing, and tips
+- Adjust servings and dietary preferences
+- Auto-generate shopping lists
+- Friendly, iterative prompting to refine results
+- Lightweight UI built for speed
+
+Tech stack
+
+- React + Vite
+- Vanilla CSS
+- ESM, HMR, and ESLint
+
+Prerequisites
+
+- Node.js 18+ and npm
+
+Quick start
+
+- Clone repo and install dependencies: npm install
+- Create .env in project root with your LLM provider key, for example:
+  - VITE_OPENAI_API_KEY=your_key
+- Start dev server: npm run dev
+- Open the local URL printed by Vite
+
+Scripts
+
+- npm run dev: Start the app with HMR
+- npm run build: Production build
+- npm run preview: Preview the production build locally
+- npm run lint: Lint the codebase (if configured)
+
+Project structure (high level)
+
+- src/
+  - App.jsx, App.css: App shell and styles
+  - components/: UI components (e.g., Header)
+  - assets/: Icons and images
+
+Usage
+
+- Enter available ingredients and constraints (diet, time, cuisine)
+- Generate a recipe, then refine by asking for substitutions or different styles
+- Export or copy the shopping list and instructions
+
+Roadmap
+
+- Save/share recipes
+- Nutrition estimates
+- Multi-model support and cost controls
+- Offline caching of previous results
+
+Contributing
+
+- Open issues and PRs are welcome. Keep changes small and include a brief rationale.
+
+Disclaimer
+
+- Always verify cooking times and allergens for your needs.
