@@ -1,10 +1,11 @@
 import { InferenceClient } from "@huggingface/inference";
-const client = new InferenceClient("hf_***");
 
 const FAILED_MSG = "Try again after a minute!";
 
 async function fetchRecipe(ingredients) {
   try {
+    const client = new InferenceClient("hf_***");
+
     const system =
       "You can only generate a food recipe. You will be provided a list of ingredients. Use them. You may add 2-3 ingredients more if required. You answer should be a valid markdown.";
     const out = await client.chatCompletion({
